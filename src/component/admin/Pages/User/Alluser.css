@@ -1,0 +1,14 @@
+.radio {
+}
+
+.radio label {
+  padding: 10px;
+  color: black;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.radio input {
+  margin-right: 20px;
+}

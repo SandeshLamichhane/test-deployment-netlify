@@ -1,0 +1,141 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 800;
+}
+
+a {
+  text-decoration: none;
+}
+.navbar {
+  background-color: #060b2603;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+a:hover {
+  text-decoration: none;
+}
+.banner {
+  background-image: url(../../../src/images/boy.jpg);
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-size: cover;
+  background-position: right center;
+  padding: 100px;
+}
+@media screen and (min-width: 480px) {
+  .mediasolidback {
+    background-color: lightgreen;
+  }
+}
+
+.navheader {
+  background-color: transparent;
+}
+.navsolidheader {
+  background-color: purple;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+}
+.navtitle {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+}
+.navbar-toggler {
+  transition: none;
+  color: wheat;
+  background: wheat;
+}
+
+nav.c .navtitle {
+  color: #fff;
+  font-size: 35px;
+  font-weight: 700;
+}
+.navbar-light .navbar-nav .nav-link {
+  color: #d3bbc3;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 30px;
+  padding-left: 25px;
+}
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .show > .nav-link {
+  color: yellow;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 500;
+  font-size: 30px;
+  padding-left: 25px;
+}
+.navbar-light .navbar-nav .nav-link:hover {
+  color: yellow;
+}
+.banner_desc h1.title {
+  margin-top: 60px;
+  color: yellow;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+}
+.banner_desc p.desc {
+  content: #d3bbc3;
+  margin: 30px 0px;
+  font-family: monospace;
+  font-size: 25px;
+}
+a.btn {
+  padding: 20 px 30 px;
+  margin: 20 px;
+  background: #2d94fc;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 30px;
+  border: 1px solid transparent;
+  margin-right: 20px;
+  transition: all 0.4s;
+  box-shadow: 1px 2px 4px 0px #00000075;
+}
+.btn-trans {
+  background: transparent !important;
+  color: #2d94fc;
+  margin: 5px;
+  font-size: 30px;
+  border: 1px solid #fff !important;
+}
+.log-out-btn {
+  background: transparent !important;
+  color: yellow;
+  font-size: 25px;
+}
+
+.log-out-btn:hover {
+  background: transparent !important;
+  color: wheat;
+  font-size: 25px;
+}
+.btn-color:hover {
+  background: transparent !important;
+  color: #2d94fc;
+  border: 1px solid #2d94fc;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.btn-trans:hover {
+  background: #2d94fc !important;
+  color: #fff;
+  transition: all 0.4s cubic-bezier(0.39, 0.575, 0.565, 1);
+  border: 1px solid transparent !important;
+}
+.our-back {
+  background: #161632;
+}

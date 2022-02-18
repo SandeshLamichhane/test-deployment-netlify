@@ -1,0 +1,83 @@
+.abt-wrapper {
+  margin: 0;
+  padding: 0;
+  background: #161632;
+  background-color: #161632;
+}
+
+.about-main-box {
+  background-image: url(../../../../src/images/boy.jpg);
+  /* height: 100vh; */
+  width: 100%;
+  background-size: cover;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about-main-box .about-box {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+  max-width: 600px;
+
+  background: #161632;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-main-box .about-box h2 {
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 30px;
+  padding: 15px 0;
+  color: yellow;
+  text-transform: uppercase;
+}
+
+.about-main-box .about-box p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-weight: 600;
+  padding: 15px 0;
+  color: rgb(255, 255, 74);
+  word-spacing: 6px;
+  line-height: 40px;
+  font-size: 28px;
+  justify-content: flex-end;
+}
+.abt-logo {
+  height: 250px;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about-main-box .about-box ul li {
+  font-size: 25px;
+  color: rgb(212, 226, 14);
+  padding: 15px 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.about-main-box .about-box ul li strong {
+  font-size: 30px;
+  color: orange;
+  padding: 15px 0;
+  font-family: "Courier New", Courier, monospace;
+}
+.go-back {
+  cursor: pointer;
+  color: rgb(247, 243, 16);
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.go-back:hover {
+  cursor: pointer;
+  color: rgb(247, 16, 93);
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}

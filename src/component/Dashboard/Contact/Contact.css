@@ -1,0 +1,72 @@
+.contact-main-box {
+  background: #161632;
+  height: 100vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 20px;
+}
+
+.contact-box {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px 2px #000000;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  max-width: 550px;
+  cursor: pointer;
+}
+
+.contact-box:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  font-family: "Courier New", Courier, monospace;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px 2px #686262;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  max-width: 550px;
+  cursor: pointer;
+  scale: 0.6;
+}
+.contact-box-p {
+  color: aliceblue;
+  font-size: 25px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+.social-media-contact-list {
+  text-align: center;
+  color: white;
+}
+.social-media-contact-list .social-media-contact-list-icons {
+  display: flex;
+  padding: 20px;
+  font-size: 26px;
+  color: orange;
+  text-align: center;
+  justify-content: center;
+
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+}
+.media-icons {
+  color: wheat;
+  size: 70;
+  margin-top: 10px;
+  width: 50px;
+}
+.fixed-icon {
+  width: 200px;
+  margin-left: 0px;
+  margin-right: auto;
+}
+.media-text {
+}
