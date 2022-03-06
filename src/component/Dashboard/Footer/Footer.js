@@ -63,6 +63,7 @@ export default function Footer() {
                             <div className='url-list'>
                                 <Link to="/Signup" className='link-url'>Sign Up</Link>
                                 <Link to="/Login" className='link-url'>Log In</Link>
+                                <Link to="/AdminPanel" className="link-url">Admin Panel</Link>
                             </div>
                         </div>
 
