@@ -150,7 +150,7 @@ export default function Header() {
 
                             </h1>
                             <p className='desc'>
-                                components to control when content collapses behind a button.. Set the defaultExpanded prop to make the Navbar start expanded. Set collapseOnSelect to make the Navbar collapse automatically when the user selects an item. You can also finely control the collapsing
+                                आधिखोला क्लवको सान, कृषि रोजगार खेलकुद संस्कृतिको प्रवर्द्धन ।
                             </p>
                             {
                                 error && <Alert variant="danger">
