@@ -37,7 +37,6 @@ export default function Login() {
             const querySnapshot = await getDocs(q);
             if (querySnapshot) {
                 querySnapshot.forEach((doc) => {
-
                     console.log(doc.data()['role']);
                     localStorage.setItem('role', doc.data()['role'])
                 })
@@ -117,7 +116,7 @@ export default function Login() {
 
                         <div className='w-100 text-center mt-2'>
                             Need an Account ?
-                            <Link to="/Signup">Sign Up</Link>
+                            <h3> <Link to="/Signup">Sign Up</Link></h3>
 
                         </div>
                     </Card>

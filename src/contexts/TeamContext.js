@@ -137,7 +137,7 @@ export default function TeamProvider({ children }) {
                 querySnapshot.forEach((doc) => {
                     items.push(doc.data())
                 })
-                setData(items);
+                setData(items.reverse());
             })
         }
         catch (e) {

@@ -8,7 +8,9 @@ import UpdateProfile from './Profile/UpdateProfile'
 
 import { Navbar, Nav, NavDropdown, Container, Alert, Modal, Form, Button, FormControl } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
+import { TabTitle } from '../../utils/GeneralFunction'
 export default function Header() {
+    TabTitle("Aadhikhola home")
     const [screenpositon, changescreenpositon] = useState(false)
     const { currentUser } = useAuth()
     const { logout } = useAuth()
@@ -92,8 +94,17 @@ export default function Header() {
                                 style={{ maxHeight: '100px' }}
                                 navbarScroll
                             >
-                                <Nav.Link href="#action1">Home</Nav.Link>
-                                <Nav.Link href="/About">About</Nav.Link>
+                                <Nav.Link href="#">Home</Nav.Link>
+                                <Link to='/About'>
+                                    <Nav.Link >
+
+
+
+
+                                        About
+
+                                    </Nav.Link>
+                                </Link>
                                 <Nav.Link href="/Contact">Contact</Nav.Link>
 
                                 {/* <NavDropdown title="Link" id="navbarScrollingDropdown">

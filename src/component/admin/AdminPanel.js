@@ -16,8 +16,11 @@ import { Alert } from 'react-bootstrap';
 import './Admin.css'
 import { SideBarData } from './SideBarData'
 import { fontSize } from '@mui/system';
+import { TabTitle } from '../../utils/GeneralFunction';
 
 export default function AdminPanel() {
+    TabTitle("Aadhikhola Admin")
+
     const [sidebar, setSideBar] = useState(false)
     const [activetab, setActivetab] = useState("News")
     const showSidebar = () => setSideBar(!sidebar)

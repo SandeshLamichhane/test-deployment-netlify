@@ -24,12 +24,15 @@ export default function Signup() {
         try {
             setError('')
             setLoading(true)
-            await auth.signOut();
             const x = await signup(emailRef.current.value,
                 passwordRef.current.value)
-            setError(x)
-            // history("/");
-
+            if (x) {
+                setError(x)
+            }
+            else {
+                history("/");
+                window.location.reload(false);
+            }
         }
         catch (e) {
             setError(e.message)
@@ -83,7 +86,7 @@ export default function Signup() {
                         </Card.Body>
                         <div className='w-100 text-center mt-2'>
                             Already have an account ?
-                            <Link to="/Login"> Log in</Link>
+                            <h4>  <Link to="/Login"> Log in</Link></h4>
                         </div>
                     </Card>
                 </div>

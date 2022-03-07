@@ -120,7 +120,7 @@ export default function AuthProvider({ children }) {
                 status: "active",
                 created: Timestamp.now()
             })
-            return "Successfull";
+
         } catch (err) {
             return err.message;
         }
