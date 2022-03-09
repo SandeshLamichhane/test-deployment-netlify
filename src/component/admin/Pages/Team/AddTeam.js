@@ -46,6 +46,11 @@ function AddTeam() {
         }
     }
 
+    const handleSelectChange = (e) => {
+        roleRef.current.value = e.target.value;
+        console.log("And value is " + roleRef.current.value)
+    }
+
     const upload = (e) => {
         try {
             imageobj = e.target.files[0];
@@ -79,10 +84,27 @@ function AddTeam() {
                                 <Form.Control type="text" onChange={(event) => { }} ref={nameRef} required />
                             </Form.Group>
 
-                            <Form.Group controlId="exampleForm.ControlTextarea1">
+
+                            {/* <Form.Group controlId="exampleForm.ControlTextarea1">
                                 <Form.Label><strong>Role ( 15 word )</strong></Form.Label>
                                 <Form.Control type="text" onChange={(event) => { }} ref={roleRef} required maxLength="15" />
+                            </Form.Group> */}
+
+                            <Form.Group controlId="exampleForm.ControlTextarea1">
+                                <Form.Label><strong>Role ( 15 word )</strong></Form.Label>
+                                <select class="form-select" required onChange={(e) => handleSelectChange(e)}>
+
+                                    <option value="Chairman">Chairman</option>
+                                    <option value="Vice Chairman">Vice Chairman</option>
+                                    <option value="Secretary">Secretary</option>
+                                    <option value="Vice Secretary">Vice Secretary</option>
+                                    <option value="Member">Member</option>
+                                    <option value="Treaser">Treaser</option>
+
+
+                                </select>
                             </Form.Group>
+
 
                             <Form.Group controlId="exampleForm.ControlTextarea1">
                                 <Form.Label><strong>Address (25 word) </strong></Form.Label>

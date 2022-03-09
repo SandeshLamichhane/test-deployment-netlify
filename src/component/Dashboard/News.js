@@ -21,7 +21,7 @@ export default function News() {
     const [modalnews, setModalNews] = useState();
 
 
-    const userPerPage = 6;
+    const userPerPage = 14;
 
     const pagesVisited = pageNumber * userPerPage;
 
@@ -44,12 +44,10 @@ export default function News() {
     }
 
     function displayModal(url, news) {
-
         setShowModal(true)
         console.log(url + news)
         setModalNews(news);
         setImageUrl(url);
-
     }
 
     const pageCount = Math.ceil(listofNews.length / userPerPage)
@@ -60,7 +58,7 @@ export default function News() {
                 return (
 
 
-                    <Col xs={12} sm={12} md={4} lg={4} className="mt-3" >
+                    <Col xs={12} sm={12} md={4} lg={4} className="mt-3" key={mykey++} >
                         <Card className="bg-gray-800" onClick={() => displayModal(dev && dev.imageUrl, dev && dev.news)}>
 
                             <Card.Img variant="top" className="img-rounded" src={dev && dev.imageUrl} />

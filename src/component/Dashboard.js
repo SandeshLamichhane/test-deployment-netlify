@@ -33,13 +33,10 @@ export default function Dashboard() {
     return (
         <div className=' '>
             <Header />
-
             <News />
             <Moto />
-
             <Member />
             <Footer />
-
         </div>
 
 

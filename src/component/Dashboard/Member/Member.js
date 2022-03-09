@@ -10,12 +10,12 @@ import { Alert } from 'react-bootstrap'
 
 export default function Member() {
     const { data } = useTeam();
-
+    let mykey = 0;
 
     const displayUsers = data.
         map(dev => {
             return (
-                <Col xs={12} sm={12} md={6} lg={6} className="mt-3 mycol" >
+                <Col xs={12} sm={12} md={6} lg={6} className="mt-3 mycol" key={mykey++} >
                     <div className="profile-box">
                         <div className="profile-list">
                             <div className='profile-image'>

@@ -64,8 +64,6 @@ export default function AddNews() {
                     //cleart the for form
 
                     formRef.current.reset();
-
-
                     setSuccess("Successfully uploaded")
                     setLoading(false)
 

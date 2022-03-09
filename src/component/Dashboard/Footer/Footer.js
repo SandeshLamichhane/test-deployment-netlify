@@ -34,19 +34,19 @@ export default function Footer() {
                                 </div>
                             </h3>
                             <p>
-                                NewRoad
+                                पुतलीबजार नगरपालिका -४
                             </p>
                             <p>
-                                Nagarpaalika Pachhadi, Pokhara
+                                आधिखोला, स्यांजा
                             </p>
                             <p>
                                 Gandaki, 33700, Nepal
                             </p>
                             <p className="email-id">
-                                aadhikhola@gmail.com
+                                aadhikholaclub@gmail.com
                             </p>
                             <h5>
-                                +977 9856073514,  +977 9856073513
+                                +977 9856073512,  +977 9856073513
                             </h5>
 
 
@@ -63,6 +63,8 @@ export default function Footer() {
                             <div className='url-list'>
                                 <Link to="/Signup" className='link-url'>Sign Up</Link>
                                 <Link to="/Login" className='link-url'>Log In</Link>
+                                <Link to="/Contact" className="link-url">Contact</Link>
+                                <Link to="/About" className="link-url">About</Link>
                                 <Link to="/AdminPanel" className="link-url">Admin Panel</Link>
                             </div>
                         </div>
@@ -85,8 +87,8 @@ export default function Footer() {
                             </form>
                             <div className='social-icons'>
                                 <a href="https://www.facebook.com/profile.php?id=100071508616289" target="_blank"><FaFacebookF size={50} className="facebook" /></a>
-                                <a href="#" target="_blank"><FaTwitter size={50} className="twitter" /></a>
-                                <a href="#" target="_blank" >  <FaGoogle size={50} className="google" /> </a>
+                                <a href="mailto:aadhikholaclub@gmail.com" target="_blank"><FaTwitter size={50} className="twitter" /></a>
+                                <a href="mailto:aadhikholaclub@gmail.com" target="_blank" >  <FaGoogle size={50} className="google" /> </a>
                             </div>
                         </div>
 

@@ -9,6 +9,10 @@ import UpdateProfile from './Profile/UpdateProfile'
 import { Navbar, Nav, NavDropdown, Container, Alert, Modal, Form, Button, FormControl } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
 import { TabTitle } from '../../utils/GeneralFunction'
+import { useNews } from '../../contexts/NewsContext'
+import { doc, query, collection, getDoc, onSnapshot } from 'firebase/firestore'
+import { auth, db, storage } from '../../Firebase'
+
 export default function Header() {
     TabTitle("Aadhikhola home")
     const [screenpositon, changescreenpositon] = useState(false)
@@ -19,10 +23,39 @@ export default function Header() {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [error, setError] = useState('');
+    const [sahayogurl, setSahayogurl] = useState(null);
 
     async function hanldeconsole() {
-        console.log(localStorage.getItem())
+
     }
+
+    async function handlepdfurl() {
+
+        window.open(sahayogurl, '_blank')
+    }
+
+    async function loadsahayogurl() {
+        try {
+            const ref = doc(db, "sahayog", "pdffile");
+            const docSnap = await getDoc(ref);
+            if (docSnap.exists()) {
+                //and the pdf url is 
+                setSahayogurl(docSnap.data()['pdfurl']);
+            } else {
+                setSahayogurl("No such document!");
+            }
+        }
+        catch (e) {
+            console.log(e.message)
+        }
+    }
+
+    useEffect(
+        () => {
+            loadsahayogurl()
+
+        }, []
+    )
 
     async function handlelogout() {
         setError('')
@@ -33,10 +66,8 @@ export default function Header() {
             // history('/login')
             localStorage.setItem('role', 'user')
             window.location.reload(false);
-
         }
         catch (e) {
-
             setError('Failed to Logout');
         }
     }
@@ -61,21 +92,17 @@ export default function Header() {
 
     };
     useEffect(() => {
-
         if (window.innerWidth <= 1000) {
             changescreenpositon(true)
         } else {
             changescreenpositon(false)
         }
-
+        //lets load the 
 
 
     }, []);
 
     window.addEventListener('scroll', changeBackground);
-
-
-
     window.addEventListener('resize', handleResize)
 
 
@@ -95,17 +122,19 @@ export default function Header() {
                                 navbarScroll
                             >
                                 <Nav.Link href="#">Home</Nav.Link>
-                                <Link to='/About'>
-                                    <Nav.Link >
+                                <Nav.Link href='/About'>
+
+                                    About
 
 
-
-
-                                        About
-
-                                    </Nav.Link>
-                                </Link>
+                                </Nav.Link>
                                 <Nav.Link href="/Contact">Contact</Nav.Link>
+                                <Nav.Link href={sahayogurl}>
+
+                                    Donor
+
+                                </Nav.Link>
+                                {/* <Nav.Link href="/sds" target="_blank" >Donation</Nav.Link> */}
 
                                 {/* <NavDropdown title="Link" id="navbarScrollingDropdown">
                             <NavDropdown.Item href="#action3">Action</NavDropdown.Item>

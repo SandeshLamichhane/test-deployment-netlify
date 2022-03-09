@@ -17,6 +17,7 @@ import './Admin.css'
 import { SideBarData } from './SideBarData'
 import { fontSize } from '@mui/system';
 import { TabTitle } from '../../utils/GeneralFunction';
+import AddSahayog from './Pages/SahayogData/AddSahayog';
 
 export default function AdminPanel() {
     TabTitle("Aadhikhola Admin")
@@ -104,14 +105,18 @@ export default function AdminPanel() {
                                             <Team />
                                         </TeamProvider>
                                         :
-                                        <div>
-                                            <Alert className="p-2 m-30 text-center">
-                                                <h3>
-                                                    Welcome to Aadhikhola Admin Page
-                                                </h3>
 
-                                            </Alert>
-                                        </div>
+                                        currentPage === "Sahayog" ?
+                                            <AddSahayog />
+                                            :
+                                            <div>
+                                                <Alert className="p-2 m-30 text-center">
+                                                    <h3>
+                                                        Welcome to Aadhikhola Admin Page
+                                                    </h3>
+
+                                                </Alert>
+                                            </div>
 
                         }
 

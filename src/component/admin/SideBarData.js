@@ -24,9 +24,9 @@ export const SideBarData = [
         cName: 'nav-text'
     },
     {
-        title: "Sahayog Data",
+        title: "Sahayog",
         icon: <FaIcons.FaCalculator />,
-        path: "/",
+        path: "/sahayog",
         cName: 'nav-text'
     },
 

@@ -105,6 +105,7 @@ export default function TeamProvider({ children }) {
 
             // Delete the file
             deleteObject(desertRef).then(() => {
+                //delete the doc
                 deleteDoc(doc(db, "Teams", docId),).then(() => {
                     setLoading(false)
                     setSuccess("Deleted")
@@ -134,10 +135,32 @@ export default function TeamProvider({ children }) {
             const q = query(collection(db, 'Teams'))
             onSnapshot(q, (querySnapshot) => {
                 const items = [];
+
                 querySnapshot.forEach((doc) => {
                     items.push(doc.data())
                 })
-                setData(items.reverse());
+                //now let have a  function
+                //   <option value="Chairman">Chairman</option>
+                // <option value="Vice Chairman">Vice Chairman</option>
+                // <option value="Secretary">Secretary</option>
+                // <option value="Vice Secretary">Vice Secretary</option>
+                // <option value="Member">Member</option>
+                // <option value="Treaser">Treaser</option>
+
+                const rearrangedlist = [];
+                const memberlabel = ["Chairman", "Vice Chairman", "Secretary", "Vice Secretary",
+                    "Member", "Treaser"]
+                const itemlength = items.length;
+                for (let m = 0; m < memberlabel.length; m++) {
+                    for (let i = 0; i < itemlength; i++) {
+                        // push inside list 
+                        if (items[i]['role'] == memberlabel[m]) {
+                            rearrangedlist.push(items[i])
+                        }
+                    }
+                }
+                // setData(items.reverse());
+                setData(rearrangedlist)
             })
         }
         catch (e) {
