@@ -131,7 +131,7 @@ export default function Header() {
                                 <Nav.Link href="/Contact">Contact</Nav.Link>
                                 <Nav.Link href={sahayogurl}>
 
-                                    Donor
+                                    Donors
 
                                 </Nav.Link>
                                 {/* <Nav.Link href="/sds" target="_blank" >Donation</Nav.Link> */}

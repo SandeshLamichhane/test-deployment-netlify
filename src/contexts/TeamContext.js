@@ -99,13 +99,15 @@ export default function TeamProvider({ children }) {
     async function deleteTeam(docId) {
 
         try {
+            const desertRef = ref(storage, 'Teams/' + docId);
+
             setLoading(true);
             deleteDoc(doc(db, "Teams", docId),).then(() => {
                 setLoading(false)
-                setSuccess("Deleted")
+                setSuccess(" Deleted")
             })
 
-            const desertRef = ref(storage, 'Teams/' + docId);
+
 
             // Delete the file
             deleteObject(desertRef).then(() => {
