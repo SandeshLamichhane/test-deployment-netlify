@@ -33,7 +33,7 @@ function AddTeam() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        console.log(rolevariable)
+
 
         const x = await AddTeam(
             nameRef.current.value,
