@@ -100,32 +100,20 @@ export default function TeamProvider({ children }) {
 
         try {
             setLoading(true);
+            deleteDoc(doc(db, "Teams", docId),).then(() => {
+                setLoading(false)
+                setSuccess("Deleted")
+            })
 
             const desertRef = ref(storage, 'Teams/' + docId);
 
             // Delete the file
             deleteObject(desertRef).then(() => {
                 //delete the doc
-                deleteDoc(doc(db, "Teams", docId),).then(() => {
-                    setLoading(false)
-                    setSuccess("Deleted")
-                })
+
             }).catch((error) => {
                 //although uf there is no image found on 
                 //also delete data from the firebase
-                if (docId) {
-                    try {
-                        deleteDoc(doc(db, "Teams", docId),).then(() => {
-                            setLoading(false)
-                            setSuccess("Deleted")
-                        })
-
-                    }
-                    catch (e) {
-
-                    }
-
-                }
                 setLoading(false)
 
                 setError(error.message)
