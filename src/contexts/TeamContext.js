@@ -111,6 +111,23 @@ export default function TeamProvider({ children }) {
                     setSuccess("Deleted")
                 })
             }).catch((error) => {
+                //although uf there is no image found on 
+                //also delete data from the firebase
+                if (docId) {
+                    try {
+                        deleteDoc(doc(db, "Teams", docId),).then(() => {
+                            setLoading(false)
+                            setSuccess("Deleted")
+                        })
+
+                    }
+                    catch (e) {
+
+                    }
+
+                }
+                setLoading(false)
+
                 setError(error.message)
             });
 
@@ -149,7 +166,7 @@ export default function TeamProvider({ children }) {
 
                 const rearrangedlist = [];
                 const memberlabel = ["Chairman", "Vice Chairman", "Secretary", "Vice Secretary",
-                    "Member", "Treaser"]
+                    "Treaser", "Member",]
                 const itemlength = items.length;
                 for (let m = 0; m < memberlabel.length; m++) {
                     for (let i = 0; i < itemlength; i++) {
