@@ -42,7 +42,13 @@ export default function TeamProvider({ children }) {
                 mailurl: mailurl,
                 fburl: fburl
             }).then(docum => {
-                console.log(docum.id)
+
+                updateDoc(doc(db, "Teams", docId),
+                    {
+
+                        docId: docum.id
+                    },
+                );
                 uploadFiles(docum.id, imageurl)
 
                 //insert image here
@@ -78,7 +84,7 @@ export default function TeamProvider({ children }) {
                             updateDoc(doc(db, "Teams", docId),
                                 {
                                     imageurl: url,
-                                    docId: docId
+
                                 },
                             );
 
@@ -99,8 +105,8 @@ export default function TeamProvider({ children }) {
     async function deleteTeam(docId) {
 
         try {
-            const desertRef = ref(storage, 'Teams/' + docId);
-
+            console.log("and the doc id is" + docId)
+            // const desertRef = ref(storage, 'Teams/' + docId);
             setLoading(true);
             deleteDoc(doc(db, "Teams", docId),).then(() => {
                 setLoading(false)
@@ -110,16 +116,16 @@ export default function TeamProvider({ children }) {
 
 
             // Delete the file
-            deleteObject(desertRef).then(() => {
-                //delete the doc
+            // deleteObject(desertRef).then(() => {
+            //     //delete the doc
 
-            }).catch((error) => {
-                //although uf there is no image found on 
-                //also delete data from the firebase
-                setLoading(false)
+            // }).catch((error) => {
+            //     //although uf there is no image found on 
+            //     //also delete data from the firebase
+            //     setLoading(false)
 
-                setError(error.message)
-            });
+            //     setError(error.message)
+            // });
 
 
 
