@@ -35,20 +35,20 @@ function AddTeam() {
         const x = await AddTeam(
             nameRef.current.value,
             addressRef.current.value,
-            roleRef.current.value,
+            roleRef.current,
             fbRef.current.value ? fbRef.current.value : "",
             mailRef.current.value ? mailRef.current.value : "",
             filedRef.current.files[0]
 
         )
-        if (success === "Successfully uploaded") {
-            formRef.current.reset();
-        }
+        formRef.current.reset();
     }
 
     const handleSelectChange = (e) => {
-        roleRef.current.value = e.target.value;
-        console.log("And value is " + roleRef.current.value)
+        roleRef.current = e.target.value;
+        console.log(e.target.value)
+        console.log(roleRef.current)
+
     }
 
     const upload = (e) => {

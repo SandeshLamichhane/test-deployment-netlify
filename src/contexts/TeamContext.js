@@ -43,7 +43,7 @@ export default function TeamProvider({ children }) {
                 fburl: fburl
             }).then(docum => {
 
-                updateDoc(doc(db, "Teams", docId),
+                updateDoc(doc(db, "Teams", docum.id),
                     {
 
                         docId: docum.id
@@ -106,7 +106,6 @@ export default function TeamProvider({ children }) {
 
         try {
             console.log("and the doc id is" + docId)
-            // const desertRef = ref(storage, 'Teams/' + docId);
             setLoading(true);
             deleteDoc(doc(db, "Teams", docId),).then(() => {
                 setLoading(false)
@@ -115,7 +114,7 @@ export default function TeamProvider({ children }) {
 
 
 
-            // Delete the file
+            //Delete the file
             // deleteObject(desertRef).then(() => {
             //     //delete the doc
 
