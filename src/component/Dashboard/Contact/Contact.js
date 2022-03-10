@@ -27,10 +27,11 @@ export default function Contact() {
                         </div>
                     </h3>
                     <p className='contact-box-p'>
-                        NewRoad
+                        पुतलीबजार नगरपालिका -४
                     </p>
                     <p className='contact-box-p'>
-                        Nagarpaalika Pachhadi, Pokhara
+
+                        आधिखोला, स्यांजा
                     </p>
                     <p className='contact-box-p'>
                         Gandaki, 33700, Nepal
@@ -42,7 +43,8 @@ export default function Contact() {
                 </div>
                 <div className='social-media-contact-list'>
                     <div className="social-media-contact-list-icons" >
-                        <div className='fixed-icon'>    <FaPhoneAlt className='media-icons' /></div>  <div className='media-text'>   +977 9856073513 </div>
+                        <div className='fixed-icon'><FaPhoneAlt className='media-icons' /></div>
+                        <div className='media-text'>   +977 9856073513 </div>
                     </div>
 
                     <div className="social-media-contact-list-icons">
@@ -66,7 +68,7 @@ export default function Contact() {
                     <div className="social-media-contact-list-icons">
                         <div className='fixed-icon'>  <FaGoogle className='media-icons' /> </div>
                         <div className='media-text'>
-                            Aadhikhola@gmail.com
+                            aadhikholaclub@gmail.com
                         </div>
 
                     </div>

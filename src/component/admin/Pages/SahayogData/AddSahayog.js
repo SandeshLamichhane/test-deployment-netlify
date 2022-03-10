@@ -2,6 +2,7 @@ import Sahayog from '../SahayogData/Sahayog.css'
 import { Container, Card, Alert } from 'react-bootstrap'
 import { useState, useRef } from 'react';
 import { auth, db, storage } from '../../../../Firebase'
+import { Document, Page, pdfjs } from "react-pdf"
 
 import { doc, query, setDoc, addDoc, deleteDoc, collection, updateDoc, onSnapshot } from 'firebase/firestore'
 import { ref, getStorage, uploadBytesResumable, getDownloadURL, deleteObject } from "@firebase/storage"
@@ -130,6 +131,13 @@ export default function AddSahayog() {
                 </PdfViewerComponent> */}
             </div>
             <div className='pdf-container'>
+                <Document file={"https://en.unesco.org/inclusivepolicylab/sites/default/files/dummy-pdf_2.pdf"}
+                    onLoadError={console.error}
+                    style={{ width: '100vw', height: 'auto' }}
+                >
+                    <Page pageIndex={0} />
+
+                </Document>
             </div>
         </div>
     )
