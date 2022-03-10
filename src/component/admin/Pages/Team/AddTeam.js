@@ -19,23 +19,26 @@ function AddTeam() {
     const roleRef = useRef();
 
 
+
+
     var imageobj;
 
-
+    var rolevariable = "Chairman";
 
     const history = useNavigate();
     const [progress, setProgress] = useState(0)
     const [fileName, setFileName] = useState();
-
+    const [rolestate, setRoleState] = useState("Chairman")
     const { AddTeam, loading, error, success } = useTeam()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+        console.log(rolevariable)
 
         const x = await AddTeam(
             nameRef.current.value,
             addressRef.current.value,
-            roleRef.current,
+            rolevariable,
             fbRef.current.value ? fbRef.current.value : "",
             mailRef.current.value ? mailRef.current.value : "",
             filedRef.current.files[0]
@@ -45,9 +48,9 @@ function AddTeam() {
     }
 
     const handleSelectChange = (e) => {
-        roleRef.current = e.target.value;
-        console.log(e.target.value)
-        console.log(roleRef.current)
+
+        rolevariable = e.target.value;
+
 
     }
 
